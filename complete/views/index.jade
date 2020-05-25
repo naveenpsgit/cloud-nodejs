@@ -10,9 +10,9 @@ html(lang="en")
 
     header
       nav
-        a(href="/") All Books
+        a(href="/") Technical Support Center
         if user
-          a(href="/mine") My Library
+          a(href="/mine") My Tickets
       section#account
         if user
           img(src=user.imageUrl)
@@ -38,15 +38,15 @@ html(lang="en")
         .nobooks There are no books!
 
     fieldset#add-book
-      legend Add Book
+      legend Raise Complaint
       form(method="post" action="/books" enctype="multipart/form-data")
         label
-          | Title
-          input(name="title" type="text" placeholder="eg. A Tale of Two Cities")
+          | Laptop Model
+          input(name="title" type="text" placeholder="eg. DELL 15E")
         label
-          | Author
-          input(name="author" type="text" placeholder="eg. Charles Dickens")
+          | Type of Issue
+          input(name="author" type="text" placeholder="eg. HW or SW")
         label
-          | Cover image (optional)
+          | Upload Your ID Image
           input(name="cover" type="file")
-        input(type="submit" value="Add Book")
+        input(type="submit" value="Submit Complaint")
