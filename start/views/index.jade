@@ -20,23 +20,7 @@ html(lang="en")
           // a(href="/logout") Sign out
         else
           //a(href="/login") Sign in
-
-    section#books
-     // if books.length
-        - each book in books
-          .book
-            if book.imageUrl
-              .cover
-                img(src=book.imageUrl title="#{book.title} by #{book.author}")
-            else
-              .info
-                .title= book.title
-                .by - by -
-                .author= book.author
-            a.delete(href="/books/delete?id=#{book.id}") delete
-      else
-        .nobooks There are no books!
-
+          
     fieldset#add-book
       legend Raise Complaint
       form(method="post" action="/books" enctype="multipart/form-data")
